@@ -1,4 +1,4 @@
 z = 'b'
 if 'p'>z:
-	print 'hello'
-	print 'mom'
+	print ('hello')
+	print ('mom')
