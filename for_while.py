@@ -7,4 +7,5 @@ if x>=1:
 			print (i)
 		i=i+1
 else:
-	print('invalid number') # factors can only be of positive number
+	print('invalid number') # factors can only be of positive number..
+	
