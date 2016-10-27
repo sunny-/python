@@ -41,17 +41,45 @@ def f(m):
 ##
 ##− Whoever is forced to pick up the last matchstick loses the game.
 
-## ***pseudo code***
+def match_stick():
+    c = 0 # input from a computer
+    u = 0 # input from a user
+    total = 0 # sum of c+u
+    user_pick = 0 # number of pics by user
+    com_pick = 0 # number of pics by computer
+    while total <= 21:
+        u = int(input('pick match stick from 1 to 4 ')) ##Ask a user to pick a number u from 1 to 4
+        user_pick += 1 ##for every user pick increment user_pick by 1
+        total = total + u
+        if total < 21:
+            c = 5-u ##Once the user picks, computer picks number 5-u
+            com_pick += 1 ##for every computer pick increment com_pick by 1
+            total = total + c
+        else: continue
+
+    if user_pick > com_pick:
+        print ("computer wins")
+        
+
+    else:
+        print ("user wins")
+
+
+
+##3. Write a recursive function which returns the sum of digits of a number.
+
+                
+def sum_digits(n):
+    s= str(n)
+    if len(s) == 1:
+        return int(s[0])
+
+    else:
+        return int(s[0]) + sum_digits(int(s[1:])) 
+        
     
 
 
 
-##3. Write a recursive function which returns the sum of digits of a  number.
 
-
-
-
-
-## 4. A palindromic number reads the same both ways.
-##Find the largest palindrome made from the product of two 2-digit numbers
-##(Hint- Ans is 9009 = 91 × 99 )
+        

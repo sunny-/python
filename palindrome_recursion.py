@@ -13,3 +13,21 @@ def pal(num): #argument alays takes int.
 
     return False
                               
+
+
+
+## 4. A palindromic number reads the same both ways.
+##Find the largest palindrome made from the product of two 2-digit numbers
+##(Hint- Ans is 9009 = 91 × 99 )
+
+
+def two_pal():
+    for i in range (10,99):
+        for j in range(10,99):
+            p=i*j
+            c= []
+            if pal(p) == True:
+                c.append(p)
+    return max(c)             
+                
+            
