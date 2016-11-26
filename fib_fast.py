@@ -19,3 +19,11 @@ def fastFib(n, memo):
     if not n in memo:
             memo[n] = fastFib(n-1, memo) + fastFib(n-2, memo)
     return memo[n]
+
+
+a = [1,3,2,4,5]
+b = [1,5,2,0,6]
+c = list(map(min,a,b))
+print (c)
+
+
