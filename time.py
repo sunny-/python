@@ -32,6 +32,12 @@ class Point:
 
     def __sub__(self,other):
         return Point(self.x-other.x, self.y-other.y)
+    
+    def __mul__(self, other): 
+        return Point(self.x * other.x + self.y * other.y)
+
+    def __rmul__(self, other): 
+        return Point(other * self.x,  other * self.y) 
         
         
 
@@ -41,7 +47,11 @@ p3 = p1+p2
 print(p3)
 p4 = p1-p2
 print(p4)
-
+p5 = p1*p2
+print(p5)
+a=6
+p6 = a*p2
+print(p6)
 
 
 
