@@ -145,38 +145,6 @@ def build_coder(shift):
     return coder
 
 
-        
-
-
-def build_encoder(shift):
-    """
-    Returns a dict that can be used to encode a plain text. For example, you
-    could encrypt the plain text by calling the following commands
-    >>>encoder = build_encoder(shift)
-    >>>encrypted_text = apply_coder(plain_text, encoder)
-    
-    The cipher is defined by the shift value. Ignores non-letter characters
-    like punctuation and numbers.
-
-    shift: 0 <= int < 27
-    returns: dict
-
-    Example:
-    >>> build_encoder(3)
-    {' ': 'c', 'A': 'D', 'C': 'F', 'B': 'E', 'E': 'H', 'D': 'G', 'G': 'J',
-    'F': 'I', 'I': 'L', 'H': 'K', 'K': 'N', 'J': 'M', 'M': 'P', 'L': 'O',
-    'O': 'R', 'N': 'Q', 'Q': 'T', 'P': 'S', 'S': 'V', 'R': 'U', 'U': 'X',
-    'T': 'W', 'W': 'Z', 'V': 'Y', 'Y': 'A', 'X': ' ', 'Z': 'B', 'a': 'd',
-    'c': 'f', 'b': 'e', 'e': 'h', 'd': 'g', 'g': 'j', 'f': 'i', 'i': 'l',
-    'h': 'k', 'k': 'n', 'j': 'm', 'm': 'p', 'l': 'o', 'o': 'r', 'n': 'q',
-    'q': 't', 'p': 's', 's': 'v', 'r': 'u', 'u': 'x', 't': 'w', 'w': 'z',
-    'v': 'y', 'y': 'a', 'x': ' ', 'z': 'b'}
-    (The order of the key-value pairs may be different.)
-
-    HINT : Use build_coder.
-    """
-    ### TODO.
-
 def build_decoder(shift):
     """
     Returns a dict that can be used to decode an encrypted text. For example, you
@@ -222,7 +190,15 @@ def apply_coder(text, coder):
     >>> apply_coder("Khoor,czruog!", build_decoder(3))
     'Hello, world!'
     """
-    ### TODO.
+    encoded_text = ''
+    #For each letter added encoded value
+    for letter in text:
+        if letter in coder:
+            encoded_text += coder[letter]
+        #Not a letter or space. e.g. ',' so use the character as is.
+        else:
+            encoded_text += letter
+    return encoded_text
   
 
 def apply_shift(text, shift):
