@@ -39,5 +39,7 @@ def main():
     print(puppy.speak())
     print(puppy.getName())
     print(puppy.birthDate())
+    repr(puppy)
+    
 
     
