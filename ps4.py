@@ -145,37 +145,6 @@ def build_coder(shift):
     return coder
 
 
-def build_decoder(shift):
-    """
-    Returns a dict that can be used to decode an encrypted text. For example, you
-    could decrypt an encrypted text by calling the following commands
-    >>>encoder = build_encoder(shift)
-    >>>encrypted_text = apply_coder(plain_text, encoder)
-    >>>decrypted_text = apply_coder(plain_text, decoder)
-    
-    The cipher is defined by the shift value. Ignores non-letter characters
-    like punctuation and numbers.
-
-    shift: 0 <= int < 27
-    returns: dict
-
-    Example:
-    >>> build_decoder(3)
-    {' ': 'x', 'A': 'Y', 'C': ' ', 'B': 'Z', 'E': 'B', 'D': 'A', 'G': 'D',
-    'F': 'C', 'I': 'F', 'H': 'E', 'K': 'H', 'J': 'G', 'M': 'J', 'L': 'I',
-    'O': 'L', 'N': 'K', 'Q': 'N', 'P': 'M', 'S': 'P', 'R': 'O', 'U': 'R',
-    'T': 'Q', 'W': 'T', 'V': 'S', 'Y': 'V', 'X': 'U', 'Z': 'W', 'a': 'y',
-    'c': ' ', 'b': 'z', 'e': 'b', 'd': 'a', 'g': 'd', 'f': 'c', 'i': 'f',
-    'h': 'e', 'k': 'h', 'j': 'g', 'm': 'j', 'l': 'i', 'o': 'l', 'n': 'k',
-    'q': 'n', 'p': 'm', 's': 'p', 'r': 'o', 'u': 'r', 't': 'q', 'w': 't',
-    'v': 's', 'y': 'v', 'x': 'u', 'z': 'w'}
-    (The order of the key-value pairs may be different.)
-
-    HINT : Use build_coder.
-    """
-    ### TODO.
- 
-
 def apply_coder(text, coder):
     """
     Applies the coder to the text. Returns the encoded text.
@@ -218,7 +187,8 @@ def apply_shift(text, shift):
     >>> apply_shift('This is a test.', 8)
     'Apq hq hiham a.'
     """
-    ### TODO.
+    assert shift >= 0 and shift < 27, 'shift %s is not between 0 and 27' % shift
+    return apply_coder(text, build_coder(shift))
    
 #
 # Problem 2: Codebreaking.
