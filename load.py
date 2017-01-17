@@ -75,7 +75,7 @@ operating_system[:5]
 
 by_tz_os = cframe.groupby(['tz', operating_system])
 
-print (by_tz_os)
+
 
 
 
