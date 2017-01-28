@@ -20,13 +20,13 @@ import numpy as np
 
 # print (a)
 
-x = np.arange(9).reshape((3,3))
-p = 2**x
+# x = np.arange(9).reshape((3,3))
+# p = 2**x
 
-print(p)
+# print(p)
 y = np.arange(9)
-
-print(y)
+q= y+2
+print(q)
 
 
 
