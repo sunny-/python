@@ -34,19 +34,31 @@ import numpy as np
 # y = np.array([3-4j,4-3j])
 # print (abs(y))
 
-th = np.linspace(0,np.pi,3)
+# th = np.linspace(0,np.pi,3)
 
-print("theta =", th)
-print("sin(theta) =",np.sin(th))
+# print("theta =", th)
+# print("sin(theta) =",np.sin(th))
 
-p = [1,2,3]
-print("p =", p)
-print("e^p =", np.exp(p))
+# p = [1,2,3]
+# print("p =", p)
+# print("e^p =", np.exp(p))
+
+# from scipy import special
+
+# x = [1,5,10]
+# print("gamma(x) =", special.gamma(x))
+
+x = np.arange(5)
+y = np.empty(5)
+np.multiply(x,10,out=y)
+print(x)
+print(y)
 
 
+y = np.zeros(10)
+np.power(2,x,out=y[::2])
 
-
-
+print(y)
 
 
 
