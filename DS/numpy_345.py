@@ -101,7 +101,9 @@ import seaborn
 # plt.show()
 # plt.title('president_heights')
 
-
+rainfall = pd.read_csv('Seattle2014.csv')['PRCP'].values
+inches = rainfall/254
+inches.shape
 
 
 
