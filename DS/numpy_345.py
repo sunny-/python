@@ -104,8 +104,8 @@ import seaborn
 rainfall = pd.read_csv('Seattle2014.csv')['PRCP'].values
 inches = rainfall/254
 inches.shape
-# plt.hist(inches,40)
-# plt.show()
+plt.hist(inches,40)
+plt.show()
 
 np.sum((inches>0.5)& (inches<1))
 
@@ -127,6 +127,8 @@ print("Maximum precip on summer days in 2014 (inches): ",
 np.max(inches[summer]))
 print("Median precip on non-summer rainy days (inches):",
 np.median(inches[rainy & ~summer]))
+
+# 
 
 
 
