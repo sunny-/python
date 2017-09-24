@@ -16,6 +16,6 @@ sunny.sayHi()
 
 uj.sayHi()
 
-sunny.room
-
-print (uj.room)
+##sunny.room
+##
+##print (uj.room)
