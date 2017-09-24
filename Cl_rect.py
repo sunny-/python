@@ -32,3 +32,65 @@ class Distance():
         return km*0.621
         
 dis_1 = Distance()
+
+
+##Create a Student class and initialize it with name and
+##roll number. Make methods to :
+##1. Display - It should display all informations of
+##the student.
+##2. setAge - It should assign age to student
+##3. setMarks - It should assign marks to the student.
+
+class Student():
+
+    def __init__(self,name,roll_num):
+        self.name = name
+        self.roll_num = roll_num
+        
+    def display (self):
+        return self.name, self.roll_num
+
+    def age (self,age):
+        self.age = age
+
+    def marks(self,marks):
+        self.marks = marks
+    
+
+mish = Student('mishra',2)
+
+mish
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
