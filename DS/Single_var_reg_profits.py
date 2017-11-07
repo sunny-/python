@@ -14,3 +14,4 @@ plt.ylabel('Profits')
 # cf = np.zeros(shape = (2,1)) # Value of Xo
 # iteration = 1500
 # alpha = 0.01 
+#
