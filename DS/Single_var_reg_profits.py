@@ -19,7 +19,7 @@ def compute_cost(x,y,theta):
 
 data.insert(0,'Theta0',1) #inserts 1 at the fisrt column
 
-cols = data.shape[1] #number of columns
+cols = data.shape[1] #gives number of columns
 x = data.iloc[:,0:cols-1]
 y = data.iloc[:,cols-1:cols]
 
